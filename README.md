@@ -1,2 +1,2 @@
 # CodeCLT
-Códigos para atividades de DB, DQL e DTL
+Códigos para atividades de BD, DQL e DTL

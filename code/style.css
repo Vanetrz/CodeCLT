@@ -1,11 +1,7 @@
-* {
-    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-}
-
 #eu {
     width: 250px;
     height: auto;
-    border-radius: 100%;
+    border-radius: none;
 }
 
 .tabela, td, th {

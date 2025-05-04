@@ -1,0 +1,106 @@
+<link rel="stylesheet" href="../style.css">
+
+<style>
+    body {
+        font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    }
+</style>
+
+<h2>Formulário de Freelancer</h2>
+
+<form id="serviceForm" onsubmit="return validateForm()">
+    <div class="form-group">
+        <label for="nome" class="required">Nome:</label>
+        <input type="text" id="nome" name="nome" required>
+    </div>
+
+    <div class="form-group">
+        <label for="sobrenome" class="required">Sobrenome:</label>
+        <input type="text" id="sobrenome" name="sobrenome" required>
+    </div>
+
+    <div class="form-group">
+        <label for="telefone" class="required">Telefone:</label>
+        <input type="text" id="telefone" name="telefone" placeholder="(00) 00000-0000" required
+               oninput="formatPhone(this)">
+    </div>
+
+    <div class="form-group">
+        <label for="email" class="required">E-mail:</label>
+        <input type="email" id="email" name="email" placeholder="seu@email.com" required>
+    </div>
+
+    <div class="form-group">
+        <label for="mensagem" class="required">Mensagem:</label>
+        <textarea id="mensagem" name="mensagem" required></textarea>
+    </div>
+
+    <div class="form-group">
+        <label for="lingua" class="required">Língua aplicada no serviço:</label>
+        <select id="lingua" name="lingua" required>
+            <option value="">Selecione...</option>
+            <option value="ingles">Inglês</option>
+            <option value="espanhol">Espanhol</option>
+            <option value="frances">Francês</option>
+            <option value="portugues">Português (pt-br)</option>
+        </select>
+    </div>
+
+    <div class="form-group">
+        <label for="prototipo" class="required">Protótipo (PDF, DOC, DOCX, JPEG ou PNG):</label>
+        <input type="file" id="prototipo" name="prototipo" accept=".pdf,.doc,.docx,.jpeg,.jpg,.png" required>
+    </div>
+
+    <fieldset>
+        <legend>Linguagens de programação preferidas:</legend>
+        <div>
+            <input type="checkbox" id="lang_html" name="linguagens" value="html-css-javascript">
+            <label for="lang_html">HTML, CSS e JavaScript</label>
+        </div>
+        <div>
+            <input type="checkbox" id="lang_react" name="linguagens" value="react-native">
+            <label for="lang_react">React Native</label>
+        </div>
+        <div>
+            <input type="checkbox" id="lang_py" name="linguagens" value="Python">
+            <label for="lang_py">Python</label>
+        </div>
+    </fieldset>
+
+    <fieldset>
+        <legend class="required">Tipo de banco de dados recomendado:</legend>
+        <div>
+            <input type="radio" id="db_relacional" name="banco_dados" value="Relacional" required>
+            <label for="db_relacional">Relacional (SQL)</label>
+        </div>
+        <div>
+            <input type="radio" id="db_nosql" name="banco_dados" value="NoSQL">
+            <label for="db_nosql">NoSQL</label>
+        </div>
+    </fieldset>
+
+    <div class="form-group">
+        <label for="turno" class="required">Turno de preferência para reuniões:</label>
+        <select id="turno" name="turno" required>
+            <option value="">Selecione...</option>
+            <option value="manha">Manhã (8h-12h)</option>
+            <option value="tarde">Tarde (13h-17h)</option>
+            <option value="noite">Noite (18h-22h)</option>
+        </select>
+    </div>
+
+    <div class="form-group">
+        <label for="horario">Melhor horário sugerido para reuniões:</label>
+        <input type="time" id="horario" name="horario">
+    </div>
+
+    <div class="form-group">
+        <label for="previsao" class="required">Previsão de entrega desejada:</label>
+        <input type="date" id="previsao" name="previsao" required>
+    </div>
+
+    <div class="buttons">
+        <button type="reset">Limpar</button>
+        <button type="submit">Enviar</button>
+    </div>
+</form>

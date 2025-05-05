@@ -11,12 +11,12 @@
 <form id="serviceForm" onsubmit="return validateForm()">
     <div class="form-group">
         <label for="nome" class="required">Nome:</label>
-        <input type="text" id="nome" name="nome" required>
+        <input type="text" id="nome" name="nome" placeholder="Digite seu nome" required>
     </div>
 
     <div class="form-group">
         <label for="sobrenome" class="required">Sobrenome:</label>
-        <input type="text" id="sobrenome" name="sobrenome" required>
+        <input type="text" id="sobrenome" name="sobrenome" placeholder="Digite seu sobrenome" required>
     </div>
 
     <div class="form-group">
@@ -27,12 +27,12 @@
 
     <div class="form-group">
         <label for="email" class="required">E-mail:</label>
-        <input type="email" id="email" name="email" placeholder="seu@email.com" required>
+        <input type="email" id="email" name="email" placeholder="Coloque seu email" required>
     </div>
 
     <div class="form-group">
         <label for="mensagem" class="required">Mensagem:</label>
-        <textarea id="mensagem" name="mensagem" required></textarea>
+        <textarea id="mensagem" name="mensagem" placeholder="Escreva uma mensagem" required></textarea>
     </div>
 
     <div class="form-group">
@@ -51,7 +51,7 @@
         <input type="file" id="prototipo" name="prototipo" accept=".pdf,.doc,.docx,.jpeg,.jpg,.png" required>
     </div>
 
-    <fieldset>
+    <fieldset class="linguagens">
         <legend>Linguagens de programação preferidas:</legend>
         <div>
             <input type="checkbox" id="lang_html" name="linguagens" value="html-css-javascript">
@@ -67,7 +67,7 @@
         </div>
     </fieldset>
 
-    <fieldset>
+    <fieldset class="banco-dados">
         <legend class="required">Tipo de banco de dados recomendado:</legend>
         <div>
             <input type="radio" id="db_relacional" name="banco_dados" value="Relacional" required>
@@ -99,7 +99,7 @@
         <input type="date" id="previsao" name="previsao" required>
     </div>
 
-    <div class="buttons">
+    <div class="form-buttons">
         <button type="reset">Limpar</button>
         <button type="submit">Enviar</button>
     </div>
